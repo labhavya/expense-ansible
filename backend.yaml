@@ -49,15 +49,15 @@
       name: backend
       enabled: true
     
-    - name: install mysql
-      ansible.builtin.pip:
-        name: PyMySQL
-        executable: pip3.9
+  - name: install mysql
+    ansible.builtin.pip:
+      name: PyMySQL
+      executable: pip3.9
 
-    - name: install mysql command line
-      ansible.builtin.package:
-        name: mysql
-        state: present
+  - name: install mysql command line
+    ansible.builtin.package:
+      name: mysql
+      state: present
 
 
   - name: load mysql schema 

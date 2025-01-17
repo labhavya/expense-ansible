@@ -49,12 +49,9 @@
       name: backend
       enabled: true
   
-  - name: install mysql
-    ansible.builtin.pip:
-      name: PyMySQL
-      executable: pip3.9
-  - name: load mysql schema 
 
+
+  - name: load mysql schema 
     community.mysql.mysql_db:
       state: import
       target: /app/schema/backend.sql

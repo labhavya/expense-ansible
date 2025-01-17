@@ -54,12 +54,14 @@
       name: PyMySQL
       executable: pip3.9
   - name: load mysql schema 
+
     community.mysql.mysql_db:
       state: import
       target: /app/schema/backend.sql
       login_user : root
       login_password: ExpenseApp@1
       login_host: mysql.devdom.fun
+      name: all
   
   - name: restart service.
     ansible.builtin.service:
